@@ -1,5 +1,5 @@
 # MovieManager
-Little interface that allows you to manager your movies and series
+Little interface that allows you to manage your movies and series
 
 
 ## About the code
