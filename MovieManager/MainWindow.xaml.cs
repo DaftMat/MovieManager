@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 
@@ -47,23 +48,22 @@ namespace MovieManager
             BitmapImage reduce = new BitmapImage();
 
             play.BeginInit();
-            play.UriSource = new Uri("./imgs/play.png", UriKind.Relative);
+            play.UriSource = new Uri("c://Program Files (x86)/Movie Manager/imgs/play.png", UriKind.Absolute);
             play.EndInit();
-            Play.Stretch = System.Windows.Media.Stretch.Fill;
             Play.Source = play;
 
             pause.BeginInit();
-            pause.UriSource = new Uri("pause.png", UriKind.Relative);
+            pause.UriSource = new Uri("c://Program Files (x86)/Movie Manager/imgs/pause.png", UriKind.Absolute);
             pause.EndInit();
             Pause.Source = pause;
 
             full.BeginInit();
-            full.UriSource = new Uri("full_screen.png", UriKind.Relative);
+            full.UriSource = new Uri("c://Program Files (x86)/Movie Manager/imgs/full_screen.png", UriKind.Absolute);
             full.EndInit();
             FullScreen.Source = full;
 
             reduce.BeginInit();
-            reduce.UriSource = new Uri("leave_screen.png", UriKind.Relative);
+            reduce.UriSource = new Uri("c://Program Files (x86)/Movie Manager/imgs/leave_screen.png", UriKind.Absolute);
             reduce.EndInit();
             ReduceScreen.Source = reduce;
         }
@@ -354,6 +354,22 @@ namespace MovieManager
         private void ShowMenuBar(object sender, MouseEventArgs e)
         {
             MediaBar.Visibility = Visibility.Visible;
+        }
+
+        private void Button_MouseEnter(object sender, MouseEventArgs e)
+        {
+            var button = sender as Button;
+            button.Foreground = new SolidColorBrush(Color.FromRgb(242, 242, 242));
+            button.Background = new SolidColorBrush(Color.FromRgb(41, 41, 41));
+            e.Handled = true;
+        }
+
+        private void Button_MouseLeave(object sender, MouseEventArgs e)
+        {
+            var button = sender as Button;
+            button.Foreground = new SolidColorBrush(Color.FromRgb(188, 188, 188));
+            button.Background = new SolidColorBrush(Color.FromRgb(19, 19, 19));
+            e.Handled = true;
         }
     }
 }

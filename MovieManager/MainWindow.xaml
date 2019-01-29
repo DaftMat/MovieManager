@@ -5,7 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Movie Manager" WindowState="Maximized" Background="#292929" d:DesignWidth="2202" d:DesignHeight="1078" Foreground="#BCBCBC">
+
+    <Window.Resources>
+        <Style x:Key="LeftTransparentStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40 5"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
     <Grid Name="LayoutRoot">
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="4*" />
@@ -25,10 +41,10 @@
                     </RadialGradientBrush>
                 </Separator.Background>
             </Separator>
-            <Button Content="Home" Click="GoHome" FontWeight="Bold" Padding="40 5" Background="#131313" BorderThickness="0" HorizontalContentAlignment="Left" FontSize="25" Foreground="#BCBCBC" />
-            <Button Content="Movies" Click="GoMovies" FontWeight="Bold" Padding="40 5" Background="#131313" BorderThickness="0" HorizontalContentAlignment="Left" FontSize="25" Foreground="#BCBCBC" />
-            <Button Content="Saga" Click="GoSagas" FontWeight="Bold" Padding="40 5" Background="#131313" BorderThickness="0" HorizontalContentAlignment="Left" FontSize="25" Foreground="#BCBCBC" />
-            <Button Content="Series" Click="GoSeries" FontWeight="Bold" Padding="40 5" Background="#131313" BorderThickness="0" HorizontalContentAlignment="Left" FontSize="25" Foreground="#BCBCBC" />
+            <Button Style="{StaticResource LeftTransparentStyle}" Content="Home" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Click="GoHome" FontWeight="Bold" Padding="40 5" Background="#131313" BorderThickness="0" HorizontalContentAlignment="Left" FontSize="25" Foreground="#BCBCBC" />
+            <Button Style="{StaticResource LeftTransparentStyle}" Content="Movies" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Click="GoMovies" FontWeight="Bold" Padding="40 5" Background="#131313" BorderThickness="0" HorizontalContentAlignment="Left" FontSize="25" Foreground="#BCBCBC" />
+            <Button Style="{StaticResource LeftTransparentStyle}" Content="Saga" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Click="GoSagas" FontWeight="Bold" Padding="40 5" Background="#131313" BorderThickness="0" HorizontalContentAlignment="Left" FontSize="25" Foreground="#BCBCBC" />
+            <Button Style="{StaticResource LeftTransparentStyle}" Content="Series" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Click="GoSeries" FontWeight="Bold" Padding="40 5" Background="#131313" BorderThickness="0" HorizontalContentAlignment="Left" FontSize="25" Foreground="#BCBCBC" />
         </StackPanel>
 
         <!-- Title bars -->
