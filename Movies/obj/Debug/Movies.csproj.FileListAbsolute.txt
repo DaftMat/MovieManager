@@ -1,5 +1,0 @@
-C:\Users\daker\source\repos\MovieManager\ClassLibrary1\obj\Debug\Movies.csproj.CoreCompileInputs.cache
-C:\Users\daker\source\repos\MovieManager\ClassLibrary1\bin\Debug\Movies.dll
-C:\Users\daker\source\repos\MovieManager\ClassLibrary1\bin\Debug\Movies.pdb
-C:\Users\daker\source\repos\MovieManager\ClassLibrary1\obj\Debug\Movies.dll
-C:\Users\daker\source\repos\MovieManager\ClassLibrary1\obj\Debug\Movies.pdb
