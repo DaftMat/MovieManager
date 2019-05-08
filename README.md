@@ -6,12 +6,22 @@ Little interface that allows you to manage your movies and series
 This project was done in order to discover C# language, it actually can be really hurtful to good C# developpers' eyes.
 
 ## Build
+
+**If you have .NET CORE 3**
 Just run these commands from the master directory
 ```
 cd Movies
 dotnet build
 cd ../MovieManager
 dotnet build
+```
+
+**If you don't have .Net core 3**
+```
+cd Movies
+msbuild
+cd ../MovieManger
+msbuild
 ```
 
 ## Execution
