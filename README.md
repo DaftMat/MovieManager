@@ -1,9 +1,17 @@
 # MovieManager
+
 Little interface that allows you to manage your movies and series
 
-
 ## About the code
+
 This project was done in order to discover C# language, it actually can be really hurtful to good C# developpers' eyes.
+
+## Download
+
+You can download this repository by running
+```
+git clone <repo_link>
+```
 
 ## Build
 
